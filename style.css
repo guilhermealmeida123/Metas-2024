@@ -1,11 +1,12 @@
 body{
+    
     background-image: linear-gradient(white, aqua);
-
+    padding-bottom: 30%;
 }
 h2{
     font-size: 100px;
 }
 
 h1{
-    font-size: 200px;
+    font-size: ;
 }
