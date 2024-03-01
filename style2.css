@@ -48,7 +48,7 @@ titulo-principal{
 
 }
 .botoes{
-    display:block
+    display:block;
 }
 .ativo{
     background-color: var(--botao-ativo);
