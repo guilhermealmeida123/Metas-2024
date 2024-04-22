@@ -1,17 +1,18 @@
 :root {
     --cor-de-fundo: #1E1E1E;
-    --verde: #6FFF57;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: #3a375e80;
-    --texto-fundo: #3a375e4d;
+    --verde: #ca57ff;
+    --branco: #f8b4ef;
+    --botao-ativo: #f867e5;
+    --botao-inativo: rgba(167, 82, 175, 0.5);
+    --texto-fundo: rgba(225, 0, 255, 0.3);
 }
 
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco);
-   
+    font-family: 'Chakra Petch', sans-serif;
 }
+
 
 .conteudo-principal {
     display: flex;
@@ -27,15 +28,15 @@ body {
     text-align: left;
     width: 100%;
     font-size: 32px;
-
 }
 
 .titulo-principal span {
     color: var(--verde);
 }
 
-.botao{
-    font-family: "Crakra Petch", sans-serif;
+
+.botao {
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -44,14 +45,17 @@ body {
     font-size: 18px;
     align-items: center;
     width: 100%;
-   
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
 }
 
-.botoes{
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+.botoes {
     display: block;
 }
 
@@ -60,32 +64,39 @@ body {
     border-bottom: 4px solid var(--verde);
 }
 
-.abas-textos{
-    background-color: var(--texto-fundo);
-    padding: 40px;
-    border-radius: 0 0 40px 40px;
-}
-
 @media screen and (min-width: 768px) {
     .botoes {
         display: flex;
     }
 
     .botao:first-child {
-        border-radius: 40px 40px 0 0;
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
     }
 }
 
-    @media screen and (min-width: 768px) {
-        .botoes {
-            display: flex;
-        }
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display:block;
+}
 
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
+.aba-conteudo{
+    display: none;
+}
 
-        .botao:last-child {
-            border-radius: 0 40px 0 0;
-        }
-    }
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
